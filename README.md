@@ -7,7 +7,7 @@ Aprés avoir crée un environement virtuel (conda, venv...)
 - Ensuite, l'idée était de construire une base de données pour y créer les tables analogues à nos dataframes (pandas).
 - Il est clair que ça aurait été plus simple d'exploiter les dataframes
 
-## Construction du fichier json finale
+## Construction du fichier json final
 - Construction des dataframes soit par la base de données soit par lecture fichier.
 - On crée un dict (corréspendant à la structure sur le pdf) python pour pouvoir y insérer les données qui nous interessent lors du parcours 
 - On parcours drugs, clinical_trials et pubmed pour gérer les citations, dates de citation etc et donc remplir le dict.
