@@ -4,6 +4,7 @@ import json
 with open('./result.json') as json_file:
     data = json.load(json_file)
  
+ # One solution would be to use sets as they do not admit redendence, this will help
 def dominent_journal_cites(data):
     count_dict = {}
     for _,v in data.items():
