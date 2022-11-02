@@ -5,7 +5,7 @@ import glob
 import os
 
 # The local path to our data
-LOCAL_PATH = "/test_data_eng"
+LOCAL_PATH = ".."
 
 # here we might provide all necessary changes to the data
 # The process can be done before loading data to the database, it can also be done after in the extract part
