@@ -7,7 +7,6 @@ with open('./result.json') as json_file:
 def dominent_journal_cites(data):
     count_dict = {}
     for _,v in data.items():
-        # on n'incremonte que si le drug n'est pas dans le dict ou s'il on ne parle pas du même médicament
         set_journal = set( dic['name'] for dic in v['journal'])
         for journal_name in set_journal:
             if journal_name not in count_dict.keys():
