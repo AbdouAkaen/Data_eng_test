@@ -11,3 +11,16 @@ SELECT date, SUM(prod_price * prod_qty) AS ventes
 /* Second request:
 
 */
+
+ SELECT transactions.client_id, SUM(CASE 
+                                        WHEN product.product_type = 'MEUBLE' AND (date >= '01-01-2019' and date <= '31-12-2019') THEN 
+                                        transactions.prod_price * transactions.prod_qty 
+                                        ELSE 0 
+                                        END) AS ventes_meubles 
+                               ,SUM(CASE 
+                                        WHEN product.product_type = 'DECO' AND (date >= '01-01-2019' and date <= '31-12-2019') THEN 
+                                        transactions.prod_price * transactions.prod_qty 
+                                        ELSE 0 END) AS ventes_deco 
+                                from transactions INNER JOIN product 
+                                ON transactions.prod_id = product.product_id 
+                                GROUP BY transactions.client_id;
